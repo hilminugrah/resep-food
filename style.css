@@ -6,7 +6,7 @@ body {
 
 .recipes {
   color: orange;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 nav {
@@ -296,6 +296,10 @@ button {
     left: 0;
     padding: 1rem 0;
     z-index: 999;
+  }
+
+  .white {
+    padding-left: 20px;
   }
 
   .nav-links.show {
