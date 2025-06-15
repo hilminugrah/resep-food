@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes Modal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1 class="recipes">Recipes</h1>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul id="nav-links" class="nav-links">
+          <li><a class="white" href="#home">home</a></li>
+          <li><a class="white" href="#recipes">resep</a></li>
+          <li><a class="white" href="#tentang">tentang</a></li>
+          <li><a class="white" href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="hero">
+        <div class="content-hero">
+          <h1 class="welcome">welcome to the Recipes food</h1>
+          <form id="search-form">
+            <div class="form-group">
+              <input type="text" id="search-input" placeholder="Contoh: Pizza, Chicken" />
+              <button type="submit">Cari</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="recipes" class="grid-container">
+        <!-- Resep ditampilkan di sini -->
+      </section>
+      <section id="tentang" class="about">
+        <div class="about-container">
+          <div class="about-text">
+            <h2 class="tentang-kami">Tentang Kami</h2>
+            <p>Recipes Food adalah website resep masakan yang menyediakan berbagai inspirasi hidangan dari seluruh dunia. Kami hadir untuk membantu kamu yang ingin mencoba menu baru di dapur atau mencari ide makanan sehari-hari.</p>
+            <p>Dengan antarmuka yang mudah digunakan, kamu bisa mencari resep berdasarkan nama makanan, melihat langkah-langkah memasak, dan mendapatkan informasi bahan-bahan utama. Yuk, mulai petualangan memasakmu sekarang!</p>
+          </div>
+          <div class="about-image">
+            <img src="image/restaurant.jpg" alt="Tentang Kami" />
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="contact-container">
+          <h2>Hubungi Kami</h2>
+          <p>Kami siap menerima kritik, saran, atau pertanyaan dari kamu. Silakan kirim pesan melalui form di bawah ini:</p>
+          <form class="contact-form">
+            <input type="text" placeholder="Nama Anda" required />
+            <input type="email" placeholder="Email Anda" required />
+            <textarea placeholder="Pesan Anda..." rows="5" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-results"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>&copy; 2025 Recipes App. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
