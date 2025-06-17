@@ -40,6 +40,26 @@ a {
   font-size: 20px;
 }
 
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: orange;
+}
+
+.contact-btn {
+  background-color: orange;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #ffcc00;
+  transform: scale(1.05);
+  color: #000;
+}
+
 .hero {
   background-image: url('image/fotohero.jpg');
   background-size: cover;
@@ -100,6 +120,15 @@ button {
   width: 100%;
   height: auto;
   border-radius: 5px;
+}
+
+.recipe-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Modal */
