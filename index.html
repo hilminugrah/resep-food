@@ -1,79 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recipes Modal</title>
+    <title>Resep Masakan Terbaik | Recipes Food</title>
+    <meta name="description" content="Temukan resep makanan terbaik dari seluruh dunia, buat resep sendiri, dan cari inspirasi masakan harian dengan Recipes Food." />
+    <meta name="keywords" content="resep makanan, resep masakan, cari resep, tambah resep, masakan rumahan, resep online, resep indonesia, food recipes" />
+    <meta name="author" content="Recipes Food Team" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav role="navigation" aria-label="Navigasi utama">
         <h1 class="recipes">Recipes</h1>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="hamburger" id="hamburger" aria-label="Menu navigasi">&#9776;</div>
         <ul id="nav-links" class="nav-links">
-          <li><a class="white" href="#home">home</a></li>
-          <li><a class="white" href="#recipes">resep</a></li>
-          <li><a class="white" href="#tentang">tentang</a></li>
-          <li><a class="white" href="#contact">contact</a></li>
+          <li><a class="white" href="#home">Home</a></li>
+          <li><a class="white" href="#tambah">Tambah resep</a></li>
+          <li><a class="white" href="#recipes">Resep</a></li>
+          <li><a class="white" href="#tentang">Tentang</a></li>
+          <li><a class="white" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section id="home" class="hero">
         <div class="content-hero">
-          <h1 class="welcome">welcome to the Recipes food</h1>
-          <form id="search-form">
+          <h1 class="welcome">Selamat datang di Recipes Food</h1>
+          <form id="search-form" role="search" aria-label="Form pencarian resep">
             <div class="form-group">
-              <input type="text" id="search-input" placeholder="Contoh: Pizza, Chicken" />
+              <input type="text" id="search-input" placeholder="Contoh: Pizza, Chicken" aria-label="Kata kunci pencarian resep" />
               <button type="submit">Cari</button>
             </div>
           </form>
         </div>
       </section>
-      <section id="recipes" class="grid-container">
-        <!-- Resep ditampilkan di sini -->
+      <section id="tambah" class="add-form-section">
+        <h2>Tambah Resep Baru</h2>
+        <form id="add-form" aria-label="Form tambah resep baru">
+          <input type="text" id="add-name" placeholder="Nama Resep" required />
+          <input type="text" id="add-image" placeholder="URL Gambar" required />
+          <input type="text" id="add-ingredients" placeholder="Bahan (pisah dengan koma)" required />
+          <input type="text" id="add-instructions" placeholder="Langkah-langkah (pisah dengan koma)" required />
+          <button type="submit">Simpan Resep</button>
+        </form>
       </section>
+      <section id="recipes" class="grid-container" aria-label="Daftar resep makanan"></section>
       <section id="tentang" class="about">
         <div class="about-container">
           <div class="about-text">
             <h2 class="tentang-kami">Tentang Kami</h2>
-            <p>Recipes Food adalah website resep masakan yang menyediakan berbagai inspirasi hidangan dari seluruh dunia. Kami hadir untuk membantu kamu yang ingin mencoba menu baru di dapur atau mencari ide makanan sehari-hari.</p>
-            <p>Dengan antarmuka yang mudah digunakan, kamu bisa mencari resep berdasarkan nama makanan, melihat langkah-langkah memasak, dan mendapatkan informasi bahan-bahan utama. Yuk, mulai petualangan memasakmu sekarang!</p>
+            <p>Recipes Food adalah platform digital yang menyediakan berbagai resep masakan dari seluruh penjuru dunia. Kami hadir untuk menjadi solusi bagi siapa saja yang ingin memasak hidangan lezat di rumah, baik pemula maupun yang sudah berpengalaman di dapur.</p>
+            <p>Dengan koleksi resep yang terus bertambah, kami berkomitmen untuk memberikan inspirasi kuliner yang mudah diikuti, menggunakan bahan-bahan sederhana namun menghasilkan cita rasa istimewa. Mulai dari masakan tradisional Indonesia, hidangan Asia, hingga makanan Barat, semua dapat kamu temukan di sini.</p>
           </div>
           <div class="about-image">
-            <img src="image/restaurant.jpg" alt="Tentang Kami" />
+            <img src="image/restaurant.jpg" alt="Ilustrasi restoran tempat memasak makanan lezat" />
           </div>
         </div>
       </section>
       <section id="contact" class="contact">
         <div class="contact-container">
           <h2>Hubungi Kami</h2>
-          <p>Kami siap menerima kritik, saran, atau pertanyaan dari kamu. Silakan kirim pesan melalui form di bawah ini:</p>
-          <form class="contact-form">
-            <input type="text" placeholder="Nama Anda" required />
-            <input type="email" placeholder="Email Anda" required />
-            <textarea placeholder="Pesan Anda..." rows="5" required></textarea>
+          <p>Silakan kirim pesan melalui form di bawah ini:</p>
+          <form class="contact-form" aria-label="Formulir kontak">
+            <input type="text" placeholder="Nama Anda" required aria-label="Nama Anda" />
+            <input type="email" placeholder="Email Anda" required aria-label="Email Anda" />
+            <textarea placeholder="Pesan Anda..." rows="5" required aria-label="Pesan Anda"></textarea>
             <button type="submit">Kirim Pesan</button>
           </form>
         </div>
       </section>
-    </main>
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="modal-results"></div>
+      <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-results">
+        <div class="modal-content">
+          <span class="close" aria-label="Tutup hasil pencarian">&times;</span>
+          <div id="modal-results"></div>
+        </div>
       </div>
-    </div>
-
+    </main>
     <footer class="footer">
       <div class="footer-container">
         <p>&copy; 2025 Recipes App. All rights reserved.</p>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
